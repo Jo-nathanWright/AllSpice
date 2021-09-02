@@ -15,6 +15,7 @@ namespace AllSpice.Models
         public int CookTime { get; set; }
         public int PrepTime { get; set; }
         public string CreatorId { get; set; }
+        public Profile Creator { get; set; }
 
 
   }
