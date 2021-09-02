@@ -6,6 +6,9 @@ CREATE TABLE IF NOT EXISTS accounts(
   email varchar(255) COMMENT 'User Email',
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8 COMMENT '';
+
+INSERT INTO accounts (id, name , email, picture) VALUES ("password", "SpaceCowboySpike", "j.wright72127@gmail.com", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ3odT-9gMr_05u85PeDVIXq2hlo8hAy-OQg&usqp=CAU");
+
 CREATE TABLE IF NOT EXISTS recipes (
   id INT NOT NULL AUTO_INCREMENT primary key COMMENT 'primary key',
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
