@@ -4,7 +4,7 @@ using AllSpice.Repositories;
 
 namespace AllSpice.Services
 {
-  internal class RecipesService
+  public class RecipesService
   {
     private readonly RecipesRepository _repo;
 

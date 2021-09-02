@@ -6,7 +6,7 @@ using Dapper;
 
 namespace AllSpice.Repositories
 {
-  internal class RecipesRepository
+  public class RecipesRepository
   {
     private readonly IDbConnection _db;
 
