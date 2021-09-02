@@ -32,5 +32,15 @@ namespace AllSpice.Services
     {
       return _repo.Create(newRecipe);
     }
+
+    internal void Delete(int recipeId, string userId)
+    {
+      Recipe recipeToDelete = Get(recipeId);
+      if (recipeToDelete.CreatorId != userId)
+      {
+        throw new Exception("You do NOT have permission to delete this event");
+      }
+      _repo.Delete(recipeId);
+    }
   }
 }

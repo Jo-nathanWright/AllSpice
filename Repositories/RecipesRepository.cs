@@ -60,5 +60,11 @@ namespace AllSpice.Repositories
       int id = _db.ExecuteScalar<int>(sql, newRecipe);
       return Get(id);
     }
+
+    internal void Delete(int id)
+    {
+      string sql = "DELETE FROM recipes WHERE id = @id LIMIT 1";
+      _db.Execute(sql, new { id });
+    }
   }
 }
